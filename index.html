@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<title>date</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script type="text/javascript" src="https://static.codehs.com/gulp/8be35fc6154c11e67e62b6c0b443d2539f0c6300/chs-js-lib/chs.js"></script>
+
+
+<style>
+canvas {
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+}
+
+pre {
+    border: 1px solid black;
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    background-color: #F5F5F5;
+}
+</style>
+
+</head>
+
+<body>
+<h1>date</h1>
+
+
+
+<canvas
+width="400"
+height="500"
+class="codehs-editor-canvas"></canvas>
+<pre id="console"></pre>
+
+<script>
+window.onload = function() {
+
+    var picture = new WebImage("https://codehs.com/uploads/642b2124a2d0195d6461fffa41d0a064");
+picture.setSize(400,500);
+picture.setPosition(0,0);
+add(picture);
+
+
+var today = new Date();
+if(today.getMonth()+1 == 4){
+    var mon = ("Apr ")
+}
+//if(today.getMonth()+1 = 5){
+//    var mon = ("May ");
+//}
+
+    var date = mon + today.getDate() + " , " + today.getFullYear() + " " + today.getHours() + ":" + ((today.getMinutes() < 10)?"0":"") + today.getMinutes() + " AM";
+    
+   
+    
+    
+var dateText = new Text(date,"25pt Arial ");
+dateText.setPosition(40,140);
+dateText.setColor("#575757");
+
+add(dateText);
+
+
+    if (typeof start === 'function') {
+        start();
+    }
+};
+</script>
+
+</body>
+</html>

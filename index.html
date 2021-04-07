@@ -25,8 +25,8 @@
 
 
 <canvas
-width="400"
-height="500"
+width="800"
+height="1250"
 class="codehs-editor-canvas"></canvas>
 <pre id="console"></pre>
 
@@ -34,8 +34,8 @@ class="codehs-editor-canvas"></canvas>
 window.onload = function() {
 
     var picture = new WebImage("https://codehs.com/uploads/642b2124a2d0195d6461fffa41d0a064");
-picture.setSize(400,500);
-picture.setPosition(0,0);
+picture.setSize(800,1000);
+picture.setPosition(0,125);
 add(picture);
 
 
@@ -52,8 +52,8 @@ if(today.getMonth()+1 == 4){
    
     
     
-var dateText = new Text(date,"25pt Arial ");
-dateText.setPosition(40,140);
+var dateText = new Text(date,"45pt Arial ");
+dateText.setPosition(100,420);
 dateText.setColor("#575757");
 
 add(dateText);

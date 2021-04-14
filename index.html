@@ -34,7 +34,7 @@ class="codehs-editor-canvas"></canvas>
 window.onload = function() {
 
     var picture = new WebImage("https://codehs.com/uploads/642b2124a2d0195d6461fffa41d0a064");
-picture.setSize(document.documentElement.scrollHeight* .8,document.documentElement.scrollHeight);
+picture.setSize((document.documentElement.scrollHeight* .8) - 16,(document.documentElement.scrollHeight) - 20);
 picture.setPosition(0,125);
 add(picture);
 

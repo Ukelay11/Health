@@ -51,16 +51,11 @@ if(today.getMonth()+1 == 5){
     
    
 
-var arrivals = await fetch('mycyride.com' + '/Stop/${3570}/Arrivals', {
-    method: 'GET',
-    cache: 'no-cache',
-    ...options,
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      ...options.headers,
-    },
-  });
+
+fetch('mycyride.com' + '/Stop/${3570}/Arrivals')
+    .then(res => {
+        console.log(res);
+    })
     
 var dateText = new Text(arrivals,"50pt Arial ");
 dateText.setPosition(150,490);

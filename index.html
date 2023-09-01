@@ -54,9 +54,13 @@ if(today.getMonth()+1 == 5){
 
 fetch('mycyride.com' + '/Stop/${3570}/Arrivals')
     .then(res => {
-        console.log(res);
+        return res.json();
+        
     })
-    
+    .then(data =>{
+        console.log(data)
+                    })
+    .catch(error => console.log(error));
 var dateText = new Text(arrivals,"50pt Arial ");
 dateText.setPosition(150,490);
 dateText.setColor("#575757");

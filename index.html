@@ -50,9 +50,19 @@ if(today.getMonth()+1 == 5){
     var date = mon + today.getDate() + " , " + today.getFullYear() + " " + today.getHours() + ":" + ((today.getMinutes() < 10)?"0":"") + today.getMinutes() + " AM";
     
    
+
+var arrivals = await fetch('mycyride.com' + '/Stop/${3570}/Arrivals', {
+    method: 'GET',
+    cache: 'no-cache',
+    ...options,
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+      ...options.headers,
+    },
+  });
     
-    
-var dateText = new Text(date,"50pt Arial ");
+var dateText = new Text(arrivals,"50pt Arial ");
 dateText.setPosition(150,490);
 dateText.setColor("#575757");
 
